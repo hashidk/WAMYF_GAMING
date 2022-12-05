@@ -5,7 +5,15 @@ const app = express()
 require('dotenv').config()
 
 app.get("/lacasita", function(req, res) {
-    res.status(200).send("Hola mundo")
+    res.status(200).send("Hola mundo GET")
+})
+
+app.post("/lacasita", function(req, res) {
+    res.status(200).send("Hola mundo POST")
+})
+
+app.put("/lacasita", function(req, res) {
+    res.status(200).send("Hola mundo PUT")
 })
 
 app.use(express.static('public'))
